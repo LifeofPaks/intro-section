@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="navBar">
+      <img src="images/logo.svg" alt="logo" class="logo">
+
+      <div class="navLinks">
+
+        <ul class="left">
+          <li class="menu">
+
+            <div class="menuBox">
+              <a href="#">Features</a>
+              <img src="images/icon-arrow-down.svg" alt="" class="arrowDown ">
+            </div>
+
+            <ul class="subMenu">
+              <li class="subMenuList">
+                <a href="#">
+                  <img src="images/icon-todo.svg" alt="todo"> Todo List
+                </a>
+              </li>
+
+              <li class="subMenuList">
+                <a href="#">
+                  <img src="images/icon-calendar.svg" alt="icon-calendar"> Calender
+                </a>
+              </li>
+
+              <li class="subMenuList">
+                <a href="#">
+                  <img src="images/icon-reminders.svg" alt="icon-reminder"> Reminders
+                </a>
+              </li>
+
+              <li class="subMenuList">
+                <a href="#">
+                  <img src="images/icon-planning.svg" alt="planning"> Planning
+                </a>
+              </li>
+            </ul>
+
+          </li>
+
+
+          <li class="menu">
+
+            <div class="menuBox">
+
+              <a href="#">Company</a>
+              <img src="images/icon-arrow-down.svg" alt="" class="arrowDown ">
+ 
+            </div>
+          
+             <ul class="subMenu">
+
+              <li class="subMenuList">
+                <a href="#">History </a>
+              </li>
+
+              <li class="subMenuList">
+                <a href="#">Our Team</a>
+              </li>
+
+              <li class="subMenuList">
+                <a href="#">Blog </a>
+              </li>
+            </ul>
+
+             </li>
+          <li class="menu"><a href="#">Careers</a>  </li>
+          <li class="menu"><a href="#">About</a>  </li>
+        </ul>
+
+        <div class="right">
+          <button class="login btn">Login</button>
+          <button class="register btn">Register</button>
+        </div>
+
+      </div>
+      <div class="overlay"></div>
+
+      <div class="toggleMenu">
+        <img src="images/icon-menu.svg" alt="menu" class="menuOpen active" width="25">
+        <img src="images/icon-close-menu.svg" alt="menu" class="menuClose" width="25">
+      </div>
+
+    </div>
+
+    <main>
+
+      <div class="mainLeft">
+        <h1>Make <br> remote work </h1>
+        <p>Get your team in sync, no matter your location. Streamline processes, 
+          create team rituals, and watch productivity soar.
+        </p>
+        
+        <button class="more">Learn more</button>
+
+        <div class="footerIcons">
+          <img src="images/client-databiz.svg" alt="client-databiz">
+          <img src="images/client-audiophile.svg" alt="client-audiophile">
+          <img src="images/client-meet.svg" alt="client-meet">
+          <img src="images/client-maker.svg" alt="client-maker">
+        </div>
+      </div>
+
+
+      <div class="mainRight">
+        <picture>
+          <source media="(max-width: 800px)" srcset="images/image-hero-mobile.png" alt="image-hero-mobile"/>
+          <img src="images/image-hero-desktop.png" alt="hero">
+        </picture>
+      </div>
+
+
+    </main>
+
+  </div>
+  
+ 
+
+  <script src="script.js"></script>
+</body>
+</html>

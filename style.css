@@ -1,0 +1,335 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --Almost-White: hsl(0, 0%, 98%);
+    --Medium-Gray: hsl(0, 0%, 41%);
+    --Almost-Black: hsl(0, 0%, 8%);
+}
+
+body{
+    min-height: 100vh;
+    background: var(--Almost-White);
+    font-family: 'Epilogue', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+button{
+    background: transparent;
+    outline: 0;
+    border: 0;
+}
+
+.container{
+    padding: 40px 30px;
+    max-width: 1440px;
+}
+
+.navBar{
+    display: flex;
+    align-items: flex-start;
+}
+
+.navBar .logo{
+    margin-right: 100px;
+}
+
+.navLinks{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 33rem;
+}
+
+.navLinks a{
+    color: var(--Medium-Gray);
+    transition: 0.3s;
+}
+.navLinks a:hover{
+    color: var(--Almost-Black);
+}
+
+.navLinks .left{
+    display: flex;
+    gap: 30px;
+    font-size: 14px;
+}
+
+.menuBox{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
+.arrowDown.active{
+   transform: rotate(180deg);
+}
+
+.menu{
+    position: relative;
+}
+
+
+/* =============================SUBMENU=============================================== */
+.subMenu{
+    width: max-content;
+    position: absolute;
+    top: 20px;
+    right:0;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+    display: none;
+    background: var(--Almost-White);
+}
+
+.subMenu.active{
+    display: block;
+}
+
+.subMenuList a{
+    display: flex;
+    align-items: center;    
+    margin-bottom: 7px;
+    font-size: 13px;
+    gap: 5px;
+}
+
+.subMenuList img{
+    margin-right: 5px;
+}
+
+
+/* ================================TOGGLEMENU================================== */
+.toggleMenu{
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+
+.toggleMenu img{
+    position: absolute;
+    left: 6px;
+    top: 7px;
+}
+
+.menuOpen, .menuClose{
+    display: none;
+}
+
+.btn{
+    margin-right: 18px;
+    color: var(--Medium-Gray);
+    font-size: 14px;
+    cursor: pointer;
+    padding: 10px 15px;
+    transition: 0.3s;
+}
+
+.btn:hover{
+    color: var(--Almost-Black);
+    border-color: var(--Almost-Black);
+}
+
+.register{
+    border: 1px solid var(--Medium-Gray);
+    border-radius: 10px;
+}
+
+main{
+    width: 80%;
+    display: flex;
+    margin: 0 auto;
+    align-items: flex-end;
+    margin-top: 30px;
+}
+
+.mainLeft{
+    flex: 60%;
+}
+
+.mainLeft h1{
+    font-size: 5rem;
+    color: var(--Almost-Black);
+    margin-bottom: 50px;
+}
+
+.mainLeft p{
+    width: 450px;
+    color: var(--Almost-Black);
+    margin-bottom: 50px;
+    line-height: 1.5;
+}
+
+.mainRight{
+    width: 40%;
+}
+.mainRight img{
+    width: 100%;
+}
+
+.more{
+    color: var(--Almost-White);
+    background: var(--Almost-Black);
+    padding: 10px 15px;
+    border: 1px solid var(--Almost-Black);
+    outline: 0;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-bottom: 80px;
+}
+
+.more:hover{
+    background: transparent;
+    color: var(--Almost-Black);
+}
+
+.footerIcons img{
+    width: 80px;
+    margin-right: 40px;
+}
+
+
+/* ============================FOR SMALLER SCREEN============================= */
+
+@media (max-width: 800px){
+
+    .container{
+        padding: 20px;
+    }
+
+    .navBar{
+        position: relative;
+    }
+    .navLinks{
+        width: 250px;
+        background: var(--Almost-White);
+        flex-direction: column;
+        position: absolute;
+        right: -30px;
+        top: -20px;
+        bottom: 0;
+        min-height: 100vh;
+        padding: 20px;
+        padding-top: 80px;
+        align-items: flex-start;
+        display: none;
+        z-index: 1;
+
+    }
+
+    .navLinks.active{
+        display: block;
+    }
+    .navLinks .menu{
+        margin-bottom: 30px;
+    }
+
+   
+
+    .navLinks .left{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+
+    main{
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+
+    .mainLeft{
+        text-align: center;
+    }
+    .mainLeft h1{
+        font-size: 2rem;
+    }
+
+    .mainLeft h1 br{
+        display: none;
+    }
+
+    .mainLeft p{
+        width: fit-content;
+        font-size: 14px;
+    }
+
+    .mainRight{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .mainRight img{
+        width: 100%;
+    }
+
+    .toggleMenu{
+        right: -100px;
+    }
+    
+    .menuOpen.active, 
+    .menuClose.active{
+        display: block;
+        z-index: 10;
+    }
+
+    .footerIcons img{
+        width: 60px;
+        margin-right: 20px;
+    }
+
+    .subMenu{
+        margin-top: 20px;
+        margin-left: 10px;
+        box-shadow: none;
+        left: -15px;
+        top: 0;
+        display: none;
+        box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3);
+        background: var(--Almost-White);
+        z-index: 100;
+    }
+
+    .subMenu.active{
+        display: block;
+    }
+
+    .right{
+        position: absolute;
+        bottom: 10px;
+    }
+
+    .overlay{
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        background: #000000a7;
+        min-height: 100vh;
+        width: 100%;
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.3s;
+    }
+
+    .overlay.active{
+        opacity: 1;
+        pointer-events: all;
+    }
+
+}
